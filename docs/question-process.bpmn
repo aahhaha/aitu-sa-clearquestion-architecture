@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" id="ClearQuestion" targetNamespace="https://github.com/aahhaha/aitu-sa-clearquestion-architecture">
+<process id="QuestionProcess" isExecutable="false">
+<startEvent id="Start"/><userTask id="Compose" name="Student writes question"/><serviceTask id="Store" name="Validate and persist"/>
+<userTask id="Review" name="Teacher reviews"/><exclusiveGateway id="Decision" name="Appropriate?"/>
+<userTask id="Answer" name="Teacher answers"/><serviceTask id="Publish" name="Publish answer without author"/><serviceTask id="Hide" name="Hide inappropriate question"/><endEvent id="End"/>
+<sequenceFlow id="f1" sourceRef="Start" targetRef="Compose"/><sequenceFlow id="f2" sourceRef="Compose" targetRef="Store"/><sequenceFlow id="f3" sourceRef="Store" targetRef="Review"/><sequenceFlow id="f4" sourceRef="Review" targetRef="Decision"/>
+<sequenceFlow id="f5" sourceRef="Decision" targetRef="Answer" name="Appropriate"/><sequenceFlow id="f6" sourceRef="Answer" targetRef="Publish"/><sequenceFlow id="f7" sourceRef="Publish" targetRef="End"/>
+<sequenceFlow id="f8" sourceRef="Decision" targetRef="Hide" name="Inappropriate"/><sequenceFlow id="f9" sourceRef="Hide" targetRef="End"/>
+</process></definitions>

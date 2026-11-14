@@ -1,0 +1,13 @@
+@startuml
+actor Student
+rectangle "Browser UI
+[Container: HTML/JavaScript]" as UI
+rectangle "Application
+[Container: Python HTTP]" as API
+database "Question database
+[Container: SQLite]" as DB
+Student --> UI
+UI --> API : HTTP JSON
+API --> DB : SQL transactions
+title C4 Level 2 - Containers
+@enduml

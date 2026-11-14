@@ -1,0 +1,18 @@
+@startuml
+start
+:Read identity notice;
+:Enter question and author;
+if (Valid?) then (yes)
+ :Submit idempotent request;
+ :Persist question;
+ :Teacher reviews queue;
+ if (Appropriate?) then (yes)
+  :Answer question;
+ else (no)
+  :Hide question;
+ endif
+else (no)
+ :Show validation message;
+endif
+stop
+@enduml

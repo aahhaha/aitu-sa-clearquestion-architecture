@@ -1,0 +1,21 @@
+@startuml
+actor Student
+participant Browser
+participant Handler
+participant Board
+database SQLite
+Student -> Browser: Submit question
+Browser -> Handler: POST /api/questions
+Handler -> Board: submit(validated fields)
+Board -> SQLite: BEGIN IMMEDIATE + lookup retry
+alt Existing identical request
+SQLite --> Board: existing ID
+else New request
+Board -> SQLite: insert question + audit / COMMIT
+SQLite --> Board: new ID
+end
+Board --> Handler: ID and replay status
+Handler --> Browser: 201 JSON
+Browser -> Handler: GET public queue
+Handler --> Browser: question without author
+@enduml

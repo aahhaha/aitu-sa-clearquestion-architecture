@@ -1,0 +1,12 @@
+@startuml
+actor "Student
+[Person]" as S
+actor "Teacher
+[Person]" as T
+rectangle "ClearQuestion
+[Software System]
+Written questions and moderation" as Q
+S --> Q : ask, read and vote
+T --> Q : inspect, answer and moderate
+title C4 Level 1 - System Context
+@enduml

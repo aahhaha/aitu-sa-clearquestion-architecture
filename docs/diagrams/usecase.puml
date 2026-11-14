@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor Student
+actor Teacher
+rectangle ClearQuestion {
+ usecase "Submit a question" as Submit
+ usecase "Read public queue" as Read
+ usecase "Vote" as Vote
+ usecase "Inspect author" as Inspect
+ usecase "Answer / hide / reopen" as Moderate
+}
+Student --> Submit
+Student --> Read
+Student --> Vote
+Teacher --> Inspect
+Teacher --> Moderate
+@enduml

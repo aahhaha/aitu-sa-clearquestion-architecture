@@ -1,0 +1,12 @@
+@startuml
+[*] --> Open : submit
+Open --> Answered : authorized answer
+Open --> Hidden : authorized hide
+Answered --> Hidden : authorized hide
+Hidden --> Open : authorized reopen / clear old answer
+Answered --> Answered : authorized update
+note right of Hidden
+Not visible in public projection.
+Voting and answering rejected.
+end note
+@enduml

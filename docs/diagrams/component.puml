@@ -1,0 +1,8 @@
+@startuml
+[Browser UI] --> [HTTP adapter] : HTTP JSON
+[HTTP adapter] --> [Board service]
+[Board service] --> [Public projection]
+[Board service] --> [Teacher projection]
+database "SQLite" as Store
+[Board service] --> Store : SQL
+@enduml
