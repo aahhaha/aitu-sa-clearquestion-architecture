@@ -25,3 +25,40 @@ The report records timestamps, environment, test counts and source hashes.
 [docs/SRS.md](docs/SRS.md)  [docs/architecture.md](docs/architecture.md)  [docs/quality-and-atam.md](docs/quality-and-atam.md)  [docs/traceability.md](docs/traceability.md)
 
 [Preparation and attribution](PROVENANCE.md). Do not publish private keys, real student records or raw interview recordings.
+
+## Preserved CI evidence
+
+[Successful verification run](https://github.com/aahhaha/aitu-sa-clearquestion-architecture/actions/runs/43629621781) tested source commit `3a3eb2c87dc7341f096b580b5254932bd99e6b6b`.
+[Preserved reports](evidence/43629621781) include machine-readable results and generated artifacts.
+The later evidence-only commit does not change the tested implementation.
+
+### Rendered architecture diagrams
+
+
+**Activity**
+
+![activity](evidence/43629621781/verification-report/diagrams/activity.svg)
+
+**Component**
+
+![component](evidence/43629621781/verification-report/diagrams/component.svg)
+
+**Container**
+
+![container](evidence/43629621781/verification-report/diagrams/container.svg)
+
+**Context**
+
+![context](evidence/43629621781/verification-report/diagrams/context.svg)
+
+**Sequence**
+
+![sequence](evidence/43629621781/verification-report/diagrams/sequence.svg)
+
+**State**
+
+![state](evidence/43629621781/verification-report/diagrams/state.svg)
+
+**Usecase**
+
+![usecase](evidence/43629621781/verification-report/diagrams/usecase.svg)

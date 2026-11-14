@@ -1,0 +1,3 @@
+.......................                                                  [100%]
+- generated xml file: /home/runner/work/aitu-sa-clearquestion-architecture/aitu-sa-clearquestion-architecture/reports/junit.xml -
+23 passed in 1.90s
